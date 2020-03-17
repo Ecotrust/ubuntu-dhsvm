@@ -50,3 +50,12 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Vagrant
+.vagrant/
+
+# Project Specific
+DHSVM-PNNL/
+UCSRB_MODEL/
+ubuntu-bionic-18.04-cloudimg-console.log
+ucsrb_demo.zip
