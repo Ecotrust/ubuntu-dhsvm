@@ -1,0 +1,21 @@
+{% block routing %}
+################ STREAM NETWORK ################################################
+# The following three fields are only used if Flow Routing = NETWORK
+Stream Map File      =  /usr/local/apps/workspace/UCSRB_MODEL/batch/basins/wenatchee/runs/vegwen_base/../../../../../DHSVM_to_Ecotrust/input_files/wenatchee/input/chiwawa/stream.map.dat
+Stream Network File  =  /usr/local/apps/workspace/UCSRB_MODEL/batch/basins/wenatchee/runs/vegwen_base/../../../../../DHSVM_to_Ecotrust/input_files/wenatchee/input/chiwawa/stream.network.dat
+Stream Class File    =  /usr/local/apps/workspace/UCSRB_MODEL/batch/basins/wenatchee/runs/vegwen_base/../../../../../DHSVM_to_Ecotrust/input_files/wenatchee/input/chiwawa/stream.class.dat
+
+################ ROAD NETWORK ##################################################
+# The following three fields are only used if Flow Routing = NETWORK and there is a road network
+#Road Map File        =                    # path for road map file
+#Road Network File    =                    # path for road network file
+#Road Class File      =                    # path for road network file
+
+#################################### UNIT HYDROGRAPH #####################################################
+
+################ UNIT HYDROGRAPH ###############################################
+# The following two fields are only used if Flow Routing = UNIT_HYDROGRAPH
+
+Travel Time File     =                    # path for travel time file
+Unit Hydrograph File =                    # path for unit hydrograph file
+{% endblock %}

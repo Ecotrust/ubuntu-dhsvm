@@ -1,0 +1,102 @@
+################################################################################
+# DHSVM INPUT FILE FORMAT
+################################################################################
+# The file is organized in sections [...], which contain key = entry pairs.
+# The file is free format, in that correct reading of the file is not dependent
+# on spaces and/or the order of the key-entry pairs within a section.
+# The keys are not case-sensitive, but the entries are, because filenames on a
+# UNIX platform are case-sensitive.
+# Comments are preceded by a '#', and run from the occurrence of '#' till the
+# end of the line. You can comment out an entire line (like in this
+# header), or you can place a comment after an entry.
+# It is important to place the key-entry pair in the correct section, since it
+# will not be found if it is in another section.
+# The easiest way to make the input file is to fill out this default template.
+# Since DHSVM will only use the keys that it requires you do not have to worry
+# about empty entries for keys that are not needed. For example, if you are
+# running the model in point mode, you do not have to fill out the routing
+# section.  If you have already filled it out you can leave it, since DHSVM will
+# not use the information.  This allows easy switching between point and basin
+# mode.
+# For more information about the specific entries see the DHSVM web page
+
+
+################################################################################
+# OPTIONS SECTION
+################################################################################
+[OPTIONS]                                 # Model Options
+{% block options %}
+{% endblock %}
+
+################################################################################
+# MODEL AREA SECTION
+################################################################################
+[AREA]                                   # Model area
+{% block area %}
+{% endblock %}
+
+################################################################################
+# TIME SECTION
+################################################################################
+[TIME]                                  # Model period
+{% block time %}
+{% endblock %}
+
+################################################################################
+# CONSTANTS SECTION
+################################################################################
+[CONSTANTS]                               # Model constants
+{% block constants %}
+{% endblock %}
+
+################################################################################
+# TERRAIN INFORMATION SECTION
+################################################################################
+[TERRAIN]                                 # Terrain information
+{% block terrain %}
+{% endblock %}
+
+##########################################################################################################
+
+################################################################################
+# ROUTING SECTION
+################################################################################
+[ROUTING]                                 # Routing information. This section is
+                                          # only relevant if the Extent = BASIN
+{% block routing %}
+{% endblock %}
+
+################################################################################
+# METEOROLOGY SECTION
+################################################################################
+[METEOROLOGY]                             # Meteorological stations
+{% block meteorology %}
+{% endblock %}
+
+################################################################################
+# SOILS INFORMATION SECTION
+################################################################################
+[SOILS]                                   # Soil information
+{% block soils %}
+{% endblock %}
+
+################################################################################
+# VEGETATION INFORMATION SECTION
+################################################################################
+[VEGETATION]
+{% block vegetation %}
+{% endblock %}
+
+################################################################################
+# MODEL OUTPUT SECTION
+################################################################################
+[OUTPUT]                   # Information what to output when
+{% block output %}
+{% endblock %}
+
+################################################################################
+# END OF INPUT FILE
+################################################################################
+[End]                                     # This is probably not needed, but
+                                          # just in case (to close the previous
+                                          # section)
