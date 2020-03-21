@@ -1,0 +1,71 @@
+[meteorology]
+Number of Stations = 2                    # Number of meteorological stations
+
+GRID = FALSE
+GRIDMET = FALSE
+GRIDDED MET DATA = '/tmp/foo.txt'
+
+# The following set of lines is to be repeated for each station, with the one
+# replaced by 2, 3, etc.
+Station Name 1 = Trinity
+North Coordinate 1 = 5325946.089
+East Coordinate 1 = 660169.62
+Elevation 1 = 893.064
+Station File 1 =  /usr/local/apps/workspace/UCSRB_MODEL/batch/basins/wenatchee/runs/vegwen_base/../../../../../DHSVM_to_Ecotrust/input_files/wenatchee/input/met/buildmet_daily_chiwawa_20112015_2.txt
+
+Station Name 2 = Plain
+North Coordinate 2 = 5295077.688
+East Coordinate 2 = 676359.202
+Elevation 2 = 590.1
+Station File 2 =  /usr/local/apps/workspace/UCSRB_MODEL/batch/basins/wenatchee/runs/vegwen_base/../../../../../DHSVM_to_Ecotrust/input_files/wenatchee/input/met/buildmet_daily_plain_2010_2015.txt
+
+################ MM5 ###########################################################
+# The following block only needs to be filled out if MM5 = TRUE.  In that case
+# This is the ONLY block that needs to be filled out
+
+MM5 Start              =                  # Start of MM5 file (MM/DD/YYYY-HH),
+MM5 Rows               =
+MM5 Cols               =
+MM5 Extreme North      =
+MM5 Extreme West       =
+MM5 DY                 =
+
+# MM5 met files
+MM5 Temperature File   =
+MM5 Humidity File      =
+MM5 Wind Speed File    =
+MM5 Shortwave File     =
+MM5 Longwave File      =
+MM5 Pressure File      =
+MM5 Precipitation File =
+MM5 Terrain File       =
+MM5 Temp Lapse File    =
+
+# For each soil layer make a key-entry pair as below (n = 1, ..,
+# Number of Soil Layers)
+
+MM5 Soil Temperature File 0 =
+MM5 Soil Temperature File 1 =
+MM5 Soil Temperature File 2 =
+
+############### RADAR ##########################################################
+# The following block only needs to be filled out if Precipitation Source =
+# RADAR.
+Radar Start            =
+Radar File             =
+Radar Extreme North    =
+Radar Extreme West     =
+Radar Number of Rows   =
+Radar Number of Columns =
+Radar Grid Spacing     =
+
+################ Wind ##########################################################
+# The following block only needs to be filled out if Wind Source = MODEL
+Number of Wind Maps    =
+Wind File Basename     =
+Wind Map Met Stations  =
+
+################ Precipitation lapse rate ######################################
+# The following block only needs to be filled out if Precipitation lapse rate
+# = MAP
+Precipitation lapse rate =

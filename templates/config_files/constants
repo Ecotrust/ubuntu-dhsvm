@@ -1,0 +1,17 @@
+{% block constants %}Ground Roughness     = {{ constants.Ground_Roughness }}
+Snow Roughness       = {{ constants.Snow_Roughness }}
+Rain Threshold       = {{ constants.Rain_Threshold }}
+Snow Threshold       = {{ constants.Snow_Threshold }}
+Snow Water Capacity  = {{ constants.Snow_Water_Capacity }}
+Reference Height     = {{ constants.Reference_Height }}
+Rain LAI Multiplier  = {{ constants.Rain_LAI_Multiplier }}
+Snow LAI Multiplier  = {{ constants.Snow_LAI_Multiplier }}
+Min Intercepted Snow = {{ constants.Min_Intercepted_Snow }}
+Outside Basin Value  = {{ constants.Outside_Basin_Value }}
+Temperature Lapse Rate   = {{ constants.Temperature_Lapse_Rate }}
+Precipitation Lapse Rate = {{ constants.Precipitation_Lapse_Rate }}
+                                          # assuming precipiatio is positively related to elevation
+Albedo Accumulation Lambda = {{ constants.Albedo_Accumulation_Lambda }}
+Albedo Melting Lambda = {{ constants.Albedo_Melting_Lambda }}
+Albedo Accumulation Min = {{ constants.Albedo_Accumulation_Min }}
+Albedo Melting Min = {{ constants.Albedo_Melting_Min }}{% endblock %}

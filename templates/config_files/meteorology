@@ -1,0 +1,65 @@
+{% block meteorology %}Number of Stations = {{ meteorology.Number_of_Stations }}
+
+GRID = {{ meteorology.GRID }}
+GRIDMET = {{ meteorology.GRIDMET }}
+GRIDDED MET DATA = {{ meteorology.GRIDDED_MET_DATA }}
+
+# The following set of lines is to be repeated for each station, with the one
+# replaced by 2, 3, etc.
+{% for station in meteorology.stations %}{{ station.0 }} = {{ station.1 }}
+{% endfor %}
+{#
+Station Name {{ loop.index }} = {{ station.Station_Name }}
+North Coordinate {{ loop.index }} = {{ station.North_Coordinate }}
+East Coordinate {{ loop.index }} = {{ station.East_Coordinate }}
+Elevation {{ loop.index }} = {{ station.Elevation }}
+Station File {{ loop.index }} =  {{ station.Station_File }}
+#}
+################ MM5 ###########################################################
+# The following block only needs to be filled out if MM5 = TRUE.  In that case
+# This is the ONLY block that needs to be filled out
+
+MM5 Start              =  {{ meteorology.MM5_Start }}
+MM5 Rows               =  {{ meteorology.MM5_Rows }}
+MM5 Cols               =  {{ meteorology.MM5_Cols }}
+MM5 Extreme North      =  {{ meteorology.MM5_Extreme_North }}
+MM5 Extreme West       =  {{ meteorology.MM5_Extreme_West }}
+MM5 DY                 =  {{ meteorology.MM5_DY }}
+
+# MM5 met files
+MM5 Temperature File   =  {{ meteorology.MM5_Temperature_File }}
+MM5 Humidity File      =  {{ meteorology.MM5_Humidity_File}}
+MM5 Wind Speed File    =  {{ meteorology.MM5_Wind_Speed_File }}
+MM5 Shortwave File     =  {{ meteorology.MM5_Shortwave_File }}
+MM5 Longwave File      =  {{ meteorology.MM5_Longwave_File }}
+MM5 Pressure File      =  {{ meteorology.MM5_Pressure_File }}
+MM5 Precipitation File =  {{ meteorology.MM5_Precipitation_File }}
+MM5 Terrain File       =  {{ meteorology.MM5_Terrain_File }}
+MM5 Temp Lapse File    =  {{ meteorology.MM5_Temp_Lapse_File }}
+
+# For each soil layer make a key-entry pair as below (n = 1, ..,
+# Number of Soil Layers)
+
+{% for mstf in meteorology.MM5_Soil_Temp_Files %}{{ mstf.0 }} =  {{ mstf.1 }}
+{% endfor %}
+############### RADAR ##########################################################
+# The following block only needs to be filled out if Precipitation Source =
+# RADAR.
+Radar Start            =  {{ meteorology.Radar_Start }}
+Radar File             =  {{ meteorology.Radar_File }}
+Radar Extreme North    =  {{ meteorology.Radar_Extreme_North }}
+Radar Extreme West     =  {{ meteorology.Radar_Extreme_West }}
+Radar Number of Rows   =  {{ meteorology.Radar_Number_of_Rows }}
+Radar Number of Columns =  {{ meteorology.Radar_Number_of_Columns }}
+Radar Grid Spacing     =  {{ meteorology.Radar_Grid_Spacing }}
+
+################ Wind ##########################################################
+# The following block only needs to be filled out if Wind Source = MODEL
+Number of Wind Maps    =  {{ meteorology.Number_of_Wind_Maps }}
+Wind File Basename     =  {{ meteorology.Wind_File_Basename }}
+Wind Map Met Stations  =  {{ meteorology.Wind_Map_Met_Stations }}
+
+################ Precipitation lapse rate ######################################
+# The following block only needs to be filled out if Precipitation lapse rate
+# = MAP
+Precipitation lapse rate =  {{ meteorology.Precipitation_lapse_rate }}{% endblock %}

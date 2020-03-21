@@ -1,0 +1,9 @@
+{% block vegetation %}
+Vegetation Map File        = {{ vegetation.Vegetation_Map_File }}
+Number of Vegetation Types = {{ vegetation.Number_of_Vegetation_Types }}
+IMPERVIOUS SURFACE ROUTING FILE =  {{ vegetation.IMPERVIOUS_SURFACE_ROUTING_FILE }}
+
+{% for veg_type in vegetation.veg_types %}{{ veg_type.0 }} = {{ veg_type.1 }}
+{% endfor %}
+
+{% endblock %}

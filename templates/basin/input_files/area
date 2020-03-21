@@ -1,4 +1,4 @@
-{% block area %}
+[area]
 Coordinate System    =  UTM              # Can be either UTM or USER_DEFINED.
                                          # The grid cells must be square
 Extreme North        =  5338622.09046602      # Coordinate for northern edge of grid
@@ -12,4 +12,3 @@ Time Zone Meridian   =  -120.0           # Time zone meridian for area
 Number of Rows       =  425              # Number of rows
 Number of Columns    =  300            # Number of columns
 Grid spacing         =  90               # Grid resolution in m
-{% endblock %}

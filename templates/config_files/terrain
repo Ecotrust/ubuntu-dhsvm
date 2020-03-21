@@ -1,0 +1,2 @@
+{% block terrain %}DEM File    	  =  {{ terrain.DEM_File }}
+Basin Mask File   =  {{ terrain.Basin_Mask_File }}{% endblock %}

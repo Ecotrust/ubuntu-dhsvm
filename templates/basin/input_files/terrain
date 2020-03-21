@@ -1,0 +1,3 @@
+[terrain]
+DEM File    	  =  /usr/local/apps/workspace/UCSRB_MODEL/batch/basins/wenatchee/runs/vegwen_base/../../../../../DHSVM_to_Ecotrust/input_files/wenatchee/input/chiwawa/chiwawa_90_dem.bin
+Basin Mask File   =  /usr/local/apps/workspace/UCSRB_MODEL/batch/basins/wenatchee/runs/vegwen_base/../../../../../DHSVM_to_Ecotrust/input_files/wenatchee/input/chiwawa/chiwawa_90_mask.bin

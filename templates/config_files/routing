@@ -1,0 +1,19 @@
+{% block routing %}################ STREAM NETWORK ################################################
+# The following three fields are only used if Flow Routing = NETWORK
+Stream Map File      =  {{ routing.Stream_Map_File }}
+Stream Network File  =  {{ routing.Stream_Network_File }}
+Stream Class File    =  {{ routing.Stream_Class_File }}
+
+################ ROAD NETWORK ##################################################
+# The following three fields are only used if Flow Routing = NETWORK and there is a road network
+#Road Map File        =  {{ routing.Road_Map_File }}
+#Road Network File    =  {{ routing.Road_Network_File }}
+#Road Class File      =  {{ routing.Road_Class_File }}
+
+#################################### UNIT HYDROGRAPH #####################################################
+
+################ UNIT HYDROGRAPH ###############################################
+# The following two fields are only used if Flow Routing = UNIT_HYDROGRAPH
+
+Travel Time File     = {{ routing.Travel_Time_File }}
+Unit Hydrograph File = {{ routing.Unit_Hydrograph_File }}{% endblock %}

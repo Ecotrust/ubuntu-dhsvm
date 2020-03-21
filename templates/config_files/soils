@@ -1,0 +1,6 @@
+{% block soils %}Soil Map File	     =  {{ soils.Soil_Map_File }}
+Soil Depth File      =  {{ soils.Soil_Depth_File }}
+Number of Soil Types = {{ soils.Number_of_Soil_Types }}
+
+{% for type in soils.types %}{{ type.0 }} = {{ type.1 }}
+{% endfor %}{% endblock %}

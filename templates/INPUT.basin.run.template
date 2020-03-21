@@ -25,37 +25,32 @@
 # OPTIONS SECTION
 ################################################################################
 [OPTIONS]                                 # Model Options
-{% block options %}
-{% endblock %}
+{% include 'config_files/options' %}
 
 ################################################################################
 # MODEL AREA SECTION
 ################################################################################
 [AREA]                                   # Model area
-{% block area %}
-{% endblock %}
+{% include 'config_files/area' %}
+
 
 ################################################################################
 # TIME SECTION
 ################################################################################
 [TIME]                                  # Model period
-{% block time %}
-{% endblock %}
+{% include 'config_files/time' %}
 
 ################################################################################
 # CONSTANTS SECTION
 ################################################################################
 [CONSTANTS]                               # Model constants
-{% block constants %}
-{% endblock %}
+{% include 'config_files/constants' %}
 
 ################################################################################
 # TERRAIN INFORMATION SECTION
 ################################################################################
 [TERRAIN]                                 # Terrain information
-{% block terrain %}
-{% endblock %}
-
+{% include 'config_files/terrain' %}
 ##########################################################################################################
 
 ################################################################################
@@ -63,36 +58,31 @@
 ################################################################################
 [ROUTING]                                 # Routing information. This section is
                                           # only relevant if the Extent = BASIN
-{% block routing %}
-{% endblock %}
+
+{% include 'config_files/routing' %}
 
 ################################################################################
 # METEOROLOGY SECTION
 ################################################################################
 [METEOROLOGY]                             # Meteorological stations
-{% block meteorology %}
-{% endblock %}
+{% include 'config_files/meteorology' %}
 
 ################################################################################
 # SOILS INFORMATION SECTION
 ################################################################################
 [SOILS]                                   # Soil information
-{% block soils %}
-{% endblock %}
-
+{% include 'config_files/soils' %}
 ################################################################################
 # VEGETATION INFORMATION SECTION
 ################################################################################
 [VEGETATION]
-{% block vegetation %}
-{% endblock %}
+{% include 'config_files/vegetation' %}
 
 ################################################################################
 # MODEL OUTPUT SECTION
 ################################################################################
 [OUTPUT]                   # Information what to output when
-{% block output %}
-{% endblock %}
+{% include 'config_files/output' %}
 
 ################################################################################
 # END OF INPUT FILE

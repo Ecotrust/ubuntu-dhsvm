@@ -1,0 +1,13 @@
+{% block area %}Coordinate System    =  {{ area.Coordinate_System }}
+                                         # The grid cells must be square
+Extreme North        =  {{ area.Extreme_North }}
+Extreme West         =  {{ area.Extreme_West }}
+Center Latitude      =  {{ area.Center_Latitude }}
+					 # (N positive)
+Center Longitude     =  {{ area.Center_Longitude }}
+					 # (E positive)
+Time Zone Meridian   =  {{ area.Time_Zone_Meridian }}
+					 # (E positive)
+Number of Rows       =  {{ area.Number_of_Rows }}
+Number of Columns    =  {{ area.Number_of_Columns }}
+Grid spacing         =  {{ area.Grid_spacing }}{% endblock %}
