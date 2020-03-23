@@ -171,7 +171,7 @@ def get_nested_config(config, section):
                 break
         if not match_found:
             dict_key = '_'.join(key.split(' '))
-        section_dict[dict_key] = config[section][key]
+            section_dict[dict_key] = config[section][key]
 
     return section_dict
 

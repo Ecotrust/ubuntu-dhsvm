@@ -8,13 +8,6 @@ GRIDDED MET DATA = {{ meteorology.GRIDDED_MET_DATA }}
 # replaced by 2, 3, etc.
 {% for station in meteorology.stations %}{{ station.0 }} = {{ station.1 }}
 {% endfor %}
-{#
-Station Name {{ loop.index }} = {{ station.Station_Name }}
-North Coordinate {{ loop.index }} = {{ station.North_Coordinate }}
-East Coordinate {{ loop.index }} = {{ station.East_Coordinate }}
-Elevation {{ loop.index }} = {{ station.Elevation }}
-Station File {{ loop.index }} =  {{ station.Station_File }}
-#}
 ################ MM5 ###########################################################
 # The following block only needs to be filled out if MM5 = TRUE.  In that case
 # This is the ONLY block that needs to be filled out

@@ -3,7 +3,7 @@ Number of Stations = 2                    # Number of meteorological stations
 
 GRID = FALSE
 GRIDMET = FALSE
-GRIDDED MET DATA = '/tmp/foo.txt'
+GRIDDED MET DATA = /usr/local/apps/workspace/UCSRB_MODEL/batch/basins/wenatchee/runs/vegwen_base/../../../../../DHSVM_to_Ecotrust/input_files/wenatchee/input/met/buildmet_daily_plain_2010_2015.txt
 
 # The following set of lines is to be repeated for each station, with the one
 # replaced by 2, 3, etc.

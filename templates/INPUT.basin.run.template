@@ -77,16 +77,15 @@
 ################################################################################
 [VEGETATION]
 {% include 'config_files/vegetation' %}
-
 ################################################################################
 # MODEL OUTPUT SECTION
 ################################################################################
 [OUTPUT]                   # Information what to output when
 {% include 'config_files/output' %}
-
 ################################################################################
 # END OF INPUT FILE
 ################################################################################
 [End]                                     # This is probably not needed, but
                                           # just in case (to close the previous
                                           # section)
+{# newline adder to pass testing #}

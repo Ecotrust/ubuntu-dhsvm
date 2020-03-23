@@ -1,5 +1,4 @@
-{% block output %}
-Output Directory           = {{ output.Output_Directory }}
+{% block output %}Output Directory           = {{ output.Output_Directory }}
 Initial State Directory    =  {{ output.Initial_State_Directory }}
 
 ################ PIXEL DUMPS ###################################################
@@ -11,7 +10,6 @@ Number of Output Pixels    = {{ output.Number_of_Output_Pixels }}
 
 {% for pixel_val in output.pixels %}{{ pixel_val.0 }} = {{ pixel_val.1 }}
 {% endfor %}
-
 ################ MODEL STATE ###################################################
 Number of Model States     =  {{ output.Number_of_Model_States }}
 
@@ -20,8 +18,7 @@ Number of Model States     =  {{ output.Number_of_Model_States }}
 
 
 {% for state_date in output.state_dates %}{{ state_date.0 }} = {{ state_date.1 }}
-{% endfor %}
-################ MODEL MAPS ####################################################
+{% endfor %}################ MODEL MAPS ####################################################
 
 Number of Map Variables    ={{ output.Number_of_Map_Variables }}
                                           # which you want to output maps
@@ -31,7 +28,6 @@ Number of Map Variables    ={{ output.Number_of_Map_Variables }}
 
 {% for variable in output.map_variables %}{{ variable.0 }} = {{ variable.1 }}
 {% endfor %}
-
 ################ MODEL IMAGES ##################################################
 
 Number of Image Variables  = {{ output.Number_of_Image_Variables }}
@@ -47,6 +43,4 @@ Number of Image Variables  = {{ output.Number_of_Image_Variables }}
 Number of Graphics      = {{ output.Number_of_Graphics }}
                                           # would like to output images
 {% for graphic_key in output.graphics %}{{ graphic_key.0 }} = {{ graphic_key.1 }}
-{% endfor %}
-
-{% endblock %}
+{% endfor %}{% endblock %}
