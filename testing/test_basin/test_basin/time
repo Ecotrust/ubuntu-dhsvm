@@ -1,5 +1,0 @@
-{% block time %}
-Time Step            = 12         # Model time step (hours)
-Model Start          = 10/01/2010-00      # 10/01/2010-00 # Model start time (MM/DD/YYYY-HH)
-Model End            = 09/30/2011-12      # 10/31/2014-21 # Model end time (MM/DD/YYYY-HH)
-{% endblock %}
