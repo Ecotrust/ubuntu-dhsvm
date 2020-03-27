@@ -2,8 +2,8 @@ import os, sys, pytest
 # import run_scenario
 
 def test_input_generation():
-    import filecmp
-    filecmp.clear_cache()
+    # import filecmp
+    # filecmp.clear_cache()
     workspace = '/usr/local/apps/workspace'
     BASIN_INPUT_FILE = os.path.join(workspace, 'testing/basin/INPUT.wenatchee.testing')
     OUTPUT_FILE = os.path.join(workspace, 'testing/basin/scenarios/scenario/run/INPUT.basin.scenario')
