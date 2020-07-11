@@ -1,2 +1,11 @@
 pytest
 jinja2
+jupyterlab
+notebook
+
+# Requires `sudo apt install libgdal-dev`
+pygdal=="`gdal-config --version`.*"
+
+pyproj
+
+rasterio

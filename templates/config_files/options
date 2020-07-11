@@ -13,6 +13,7 @@ QPF                  = {{ options.QPF }}
 PRISM                = {{ options.PRISM }}
 PRISM data path      = {{ options.PRISM_data_path }}
 PRISM data extension = {{ options.PRISM_data_extension }}
+{% if Gridded_Met_data is defined %}Gridded Met data     = {{ Gridded_Met_data }}{% else %}Gridded Met data     = FALSE{% endif %}
 Canopy radiation attenuation mode = {{ options.Canopy_radiation_attenuation_mode }}
 Shading              = {{ options.Shading }}
 Shading data path    = {{ options.Shading_data_path }}
@@ -27,3 +28,8 @@ Temperature lapse rate   = {{ options.Temperature_lapse_rate }}
 Precipitation lapse rate = {{ options.Precipitation_lapse_rate }}
 Cressman radius      = {{ options.Cressman_radius }}
 Cressman stations    = {{ options.Cressman_stations }}{% endblock %}
+{% if Stream_Temperature is defined %}Stream Temperature   = {{ Stream_Temperature}}{% endif %}
+{% if Riparian_Shading is defined %}Riparian Shading       = {{ Riparian_Shading }}{% endif %}
+{% if Variable_Light_Transmittance is defined %}Variable Light Transmittance  = {{ Variable_Light_Transmittance }}{% endif %}
+{% if Canopy_Gapping is defined %}Canopy Gapping = {{ Canopy_Gapping }}{% endif %}
+{% if Snow_Sliding is defined %}Snow Sliding = {{ Snow_Sliding }}{% endif %}

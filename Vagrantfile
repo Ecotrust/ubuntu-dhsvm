@@ -17,6 +17,7 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = true
 
   config.vm.network "forwarded_port", guest:8000, host:8000
+  config.vm.network "forwarded_port", guest:8888, host:8888
   # config.vm.network "forwarded_port", guest:5432, host:65432
 
   config.ssh.insert_key = true
@@ -66,7 +67,9 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-    vb.memory = "2048"
+    # vb.memory = "2048"
+    vb.memory = "4096"
+    vb.cpus = "4"
   end
   #
   # View the documentation for the provider you are using for more

@@ -1,9 +1,5 @@
 {% block meteorology %}Number of Stations = {{ meteorology.Number_of_Stations }}
 
-GRID = {{ meteorology.GRID }}
-GRIDMET = {{ meteorology.GRIDMET }}
-GRIDDED MET DATA = {{ meteorology.GRIDDED_MET_DATA }}
-
 # The following set of lines is to be repeated for each station, with the one
 # replaced by 2, 3, etc.
 {% for station in meteorology.stations %}{{ station.0 }} = {{ station.1 }}
